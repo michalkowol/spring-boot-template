@@ -1,0 +1,15 @@
+.DS_Store
+.swf
+.jpg
+.jpeg
+.png
+.gif
+.idea
+*.iml
+*.ipr
+*.iws
+tmp.json
+
+.gradle
+build/
+out/

@@ -1,0 +1,35 @@
+server:
+  compression:
+    enabled: true
+
+spring:
+  datasource:
+    url: 'jdbc:h2:mem:db;MODE=PostgreSQL'
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+    drop-first: true # TODO remove once we have stable schema
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    database: POSTGRESQL
+    properties:
+      hibernate:
+        jdbc.lob.non_contextual_creation: true # avoid a warning message https://github.com/spring-projects/spring-boot/issues/12007
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web.exposure.include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    root: INFO
+    WireMock: WARN
+    com.michalkowol: INFO
+
+app:
+  custom: "hello"

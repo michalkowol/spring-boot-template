@@ -1,0 +1,18 @@
+server:
+  error:
+    include-stacktrace: ON_TRACE_PARAM
+
+spring:
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+logging:
+  level:
+    root: INFO
+    WireMock: WARN
+    com.michalkowol: INFO
+#    org.springframework.transaction: DEBUG
+#    org.springframework.orm.jpa: DEBUG
