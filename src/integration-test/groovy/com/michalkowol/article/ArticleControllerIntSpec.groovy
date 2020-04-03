@@ -6,9 +6,8 @@ import org.springframework.test.web.servlet.ResultActions
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 
-import static org.hamcrest.Matchers.equalTo
+import static net.javacrumbs.jsonunit.spring.JsonUnitResultMatchers.json
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 class ArticleControllerIntSpec extends IntegrationSpec {
@@ -35,6 +34,6 @@ class ArticleControllerIntSpec extends IntegrationSpec {
         ]
         result
                 .andExpect(status().isOk())
-                .andExpect(jsonPath('$', equalTo(expectedResult)))
+                .andExpect(json().isEqualTo(expectedResult))
     }
 }
