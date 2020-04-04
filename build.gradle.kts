@@ -13,10 +13,11 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 
+    implementation( "org.postgresql:postgresql:42.2.12")
+    implementation("org.testcontainers:postgresql:1.13.0")
     implementation( "com.vladmihalcea:hibernate-types-52")
     implementation( "org.liquibase:liquibase-core")
-    runtimeOnly("com.h2database:h2")
-    
+
     implementation("org.springdoc:springdoc-openapi-ui")
 
     implementation( "org.mapstruct:mapstruct")
