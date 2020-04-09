@@ -13,19 +13,19 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 
-    implementation( "org.postgresql:postgresql:42.2.12")
+    implementation("org.postgresql:postgresql:42.2.12")
     implementation("org.testcontainers:postgresql:1.13.0")
-    implementation( "com.vladmihalcea:hibernate-types-52")
-    implementation( "org.liquibase:liquibase-core")
+    implementation("com.vladmihalcea:hibernate-types-52")
+    implementation("org.liquibase:liquibase-core")
 
     implementation("org.springdoc:springdoc-openapi-ui")
 
-    implementation( "org.mapstruct:mapstruct")
-    annotationProcessor( "org.mapstruct:mapstruct-processor")
+    implementation("org.mapstruct:mapstruct")
+    annotationProcessor("org.mapstruct:mapstruct-processor")
 
     integrationTestImplementation( "org.springframework.boot:spring-boot-starter-test")
-    testImplementation( "org.codehaus.groovy:groovy-all")
-    testImplementation( "org.spockframework:spock-spring")
-    testImplementation( "net.javacrumbs.json-unit:json-unit-assertj")
-    integrationTestImplementation( "net.javacrumbs.json-unit:json-unit-spring")
+    testImplementation("org.codehaus.groovy:groovy-all")
+    testImplementation("org.spockframework:spock-spring")
+    testImplementation("net.javacrumbs.json-unit:json-unit-assertj")
+    integrationTestImplementation("net.javacrumbs.json-unit:json-unit-spring")
 }
